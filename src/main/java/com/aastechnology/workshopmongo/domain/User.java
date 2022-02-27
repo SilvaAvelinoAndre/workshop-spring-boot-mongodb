@@ -3,9 +3,16 @@ package com.aastechnology.workshopmongo.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document // anotation indica que a classe é uma coleção do mongodb
+// É possivel colocar o nome(que vai aparecer no bd) que nem acima, mas também funciona só com a anotation, pois ela nomeia com o mesmo nome
+// da classe só que com letra minuscula
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	@Id
 	private String id;
 	private String name;
 	private String email;
