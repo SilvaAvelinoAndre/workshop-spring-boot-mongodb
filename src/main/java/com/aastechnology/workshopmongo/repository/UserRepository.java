@@ -7,6 +7,8 @@ import com.aastechnology.workshopmongo.domain.User;
 
 @Repository
 public interface UserRepository extends MongoRepository<User, String> {
+
+	
 	
 	
 
